@@ -394,13 +394,6 @@ For detail, see `comment-dwim'."
                                             (generate-new-buffer-name coffee-compiled-buffer-name))))
     (compile (concat coffee-command " " args))))
 
-(defun coffee-run-cmd (args)
-  "Given an arbitrary set of arguments for the `coffee-command', compile the command and show output in a custom compilation buffer."
-  (interactive "sArguments: ")
-  (let ((compilation-buffer-name-function (lambda (this-mode)
-                                            (generate-new-buffer-name coffee-compiled-buffer-name))))
-    (compile (concat coffee-command " " args))))
-
 ;;
 ;; imenu support
 ;;
